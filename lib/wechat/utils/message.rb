@@ -43,7 +43,7 @@ module Wechat
         )
       end
 
-      def send_news_message(access_token, user_open_id, articles = [])
+      def send_news_message(access_token, user_open_id, articles = [], customservice: nil)
         articles = articles.map do |article|
           hash_article = article.respond_to?(:to_hash) ? article.to_hash : article.to_h
           hash_article.deep_transform_keys { |key| key.to_s.underscore }.slice("title", "description", "url", "picurl")
@@ -55,7 +55,7 @@ module Wechat
         )
       end
 
-      def send_mpnews_message(access_token, user_open_id, media_id)
+      def send_mpnews_message(access_token, user_open_id, media_id, customservice: nil)
         send_message(
             access_token, user_open_id, :mpnews,
             media_id: media_id,

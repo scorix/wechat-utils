@@ -1,6 +1,7 @@
 require "wechat/utils/version"
 require "json"
 require "patron"
+require "active_support/core_ext/hash"
 require "wechat/utils/file"
 require "wechat/utils/message"
 
