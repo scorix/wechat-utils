@@ -38,4 +38,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "patron"
   spec.add_dependency "activesupport"
+  spec.add_dependency "puma"
 end
